@@ -1,0 +1,30 @@
+body{
+  background-color: #F8F8FF;
+  user-select:none
+}
+
+.navbar{
+  z-index: 20;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(227, 217, 255, 0.8) 0%, rgba(248, 248, 255, 0.8) 100%);
+  --bs-navbar-color:#C0AAFF;
+  --bs-navbar-hover-color: #9800DF;
+  max-width: 100%;
+}
+
+
+.logo1{
+  position: relative;
+  left: -24%;
+  width:200px;
+}
+
+#log{
+  display: flex;
+  position: absolute;
+  right: 12%;
+}
+
+
