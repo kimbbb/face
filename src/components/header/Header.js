@@ -19,8 +19,8 @@ function Header() {
             <Nav.Link onClick={()=>{ navigate('/') }}>일기 작성</Nav.Link>
             <Nav.Link onClick={()=>{ navigate('/about') }}>소개</Nav.Link>
             <div id='log' >
-            <Nav.Link onClick={()=>{ navigate('/') }}>로그인</Nav.Link>
-            <Nav.Link onClick={()=>{ navigate('/') }}>회원가입</Nav.Link> 
+            <Nav.Link onClick={()=>{ navigate('/login') }}>로그인</Nav.Link>
+            <Nav.Link onClick={()=>{ navigate('/signup') }}>회원가입</Nav.Link> 
             </div>         
           </Nav>
           </Navbar.Collapse>

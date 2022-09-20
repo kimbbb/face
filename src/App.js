@@ -1,15 +1,19 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import Header from "./components/header/Header.js";
 import Main from "./page/main/Main.js";
+import Login from "./page/user/Login.js";
+import Sign from "./page/user/Sign.js";
+import About from "./page/about/About.js";
 
 
 function App() {
   return (
     <div>
-      <Header/>
       <Routes>
         <Route path='/' element={<Main/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/signup' element={<Sign/>}/>
+        <Route path='/about' element={<About/>}/>
       </Routes>
     </div>
   );
