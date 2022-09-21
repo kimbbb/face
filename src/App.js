@@ -4,6 +4,7 @@ import Main from "./page/main/Main.js";
 import Login from "./page/user/Login.js";
 import Sign from "./page/user/Sign.js";
 import About from "./page/about/About.js";
+import Writing from "./page/writing/Writing.js";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Sign/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/writing' element={<Writing/>}/>
       </Routes>
     </div>
   );

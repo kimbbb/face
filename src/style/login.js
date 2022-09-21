@@ -62,7 +62,7 @@ export const right=styled.div`
 export const login=styled.div`
   position: absolute;
   display:flex;
-  top:50%;
+  top:48%;
   left: 50%;
   transform: translate(-50%,-50%);
   flex-direction: column;
@@ -72,7 +72,7 @@ export const login=styled.div`
 export const llogo = styled.img`
   min-width:100px;
   min-height:50px;
-  margin-bottom:40px;
+  margin-bottom:30px;
 `;
 
 export const id=styled.input`

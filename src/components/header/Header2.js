@@ -10,13 +10,13 @@ function Header() {
 
   return(
     <>
-      <Navbar style={{background:'#F8F8FF'}}>
+      <Navbar style={{background:'#fff'}}>
           <Container classNamr='header'>
           <Navbar.Brand href="/"><img className='logo1' src={Logo}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link onClick={()=>{ navigate('/') }}>일기 작성</Nav.Link>
+            <Nav.Link onClick={()=>{ navigate('/writing') }}>다이어리</Nav.Link>
             <Nav.Link onClick={()=>{ navigate('/about') }}>소개</Nav.Link>
             <div id='log' >
             <Nav.Link onClick={()=>{ navigate('/login') }}>로그인</Nav.Link>

@@ -2,6 +2,8 @@ import React from "react";
 import * as M from "../../style/main.js";
 import mainface from "../../image/main.svg"
 import Header from "../../components/header/Header.js";
+import Button from '../writing/Button.js';
+
 
 
 
@@ -14,7 +16,7 @@ function Main() {
         <img style={{width:'100%'}} src={mainface}/>
       </M.mainBox>
     </M.main>
-
+    <Button/>
 
     </>
   );

@@ -1,11 +1,13 @@
 import Header from '../../components/header/Header3';
 import aboutimg from '../../image/about.svg'
+import Button from '../writing/Button.js';
 
 function About() {
   return(
     <>
     <Header/>
     <img style={{width: '100%'}} src={aboutimg}/>
+    <Button/>
     </>
   )
 }
