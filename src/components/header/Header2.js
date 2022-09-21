@@ -16,7 +16,7 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link onClick={()=>{ navigate('/writing') }}>다이어리</Nav.Link>
+            <Nav.Link onClick={()=>{ navigate('/') }}>다이어리</Nav.Link>
             <Nav.Link onClick={()=>{ navigate('/about') }}>소개</Nav.Link>
             <div id='log' >
             <Nav.Link onClick={()=>{ navigate('/login') }}>로그인</Nav.Link>

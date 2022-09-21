@@ -20,17 +20,63 @@ export const dial=styled.h2`
 `
 
 export const date=styled.div`
-  background:#000;
   margin-bottom:20px;
   width:100%;
   height:70px;
+  display: flex;
+  justify-content: space-between;
+`
+
+export const mon=styled.div`
+  font-weight:700;
+  font-size:18px;
+  width:48%;
+  height:100%;
+  display: flex;
+  padding-left: 30px;
+  align-items: center;
+  background:#ECECFF;
+  border-radius: 10px;
+  position: relative;
+`
+
+export const month=styled.input`
+  height: 40px;
+  width: 260px;
+  padding: 6px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%,-50%);
+`
+
+export const weather=styled.select`
+  display: flex;
+  padding-left: 30px;
+  align-items: center;
+  height: 40px;
+  width: 260px;
+  padding: 6px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%,-50%);
+`
+
+export const icon = styled.option`
+  text-align: center;
 `
 
 export const title=styled.input`
   width:100%;
   height:70px;
+  font-size:18px;
+  font-weight:700;
+
   margin-bottom:20px;
-  padding:10px;
+  padding:20px;
   border-radius: 10px;
   background:#EFF2F9;
   border:none;
@@ -38,19 +84,45 @@ export const title=styled.input`
     outline:4px solid #BE97FF82;
   }
 `
-export const ing=styled.textarea`
+
+
+export const ingbox=styled.div`
   width:100%;
   height:300px;
-  padding:10px;
+  padding:20px;
+  margin-bottom:14px;
+  border:1px solid #000;
+  border-radius: 10px;
+  background:#EFF2F9;
+  border:none;
+  &:focus-within{
+    outline:4px solid #BE97FF82;
+  }
+`
+
+export const ing=styled.textarea`
+  width:100%;
+  height:100%;
   margin-bottom:14px;
   resize: none;
-  border:1px solid #000;
   overflow:auto;
   border-radius: 10px;
   background:#EFF2F9;
   border:none;
   &:focus{
-    outline:4px solid #BE97FF82;
+    outline:none;
+  }
+  
+  &::-webkit-scrollbar {
+    width: 16px;
+    height: 10px;
+    border-radius: 10px;
+    background: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #BE97FF66;
+    border-radius: 10px;
+    height: 30%;
   }
 
 `
