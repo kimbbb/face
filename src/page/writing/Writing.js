@@ -1,11 +1,21 @@
 import Header from "../../components/header/Header2.js";
 import Button from './Button.js';
+import Mood from './Mood.js'
 import * as W from '../../style/writing.js'
 import { useState } from "react";
 
 
 function Writing() {
 
+  let [props, setProps]=useState("none");
+
+  function changeMode(){
+    if (props === "none"){
+      setProps("block")
+    } else {
+      setProps("none")
+    }
+  }
 
   return(
     <>
@@ -24,9 +34,12 @@ function Writing() {
           </W.mon>
       </W.date>
 
-      <W.title placeholder="제목을 작성해주세요.">
-        
-      </W.title>
+      <W.titlebox>
+        <W.title placeholder="제목을 작성해주세요."/>
+        <W.mood 
+        onClick={changeMode}
+        />
+      </W.titlebox>
 
       <W.ingbox>
         <W.ing placeholder="일기를 작성해주세요."></W.ing>
@@ -36,6 +49,10 @@ function Writing() {
         <W.push>완료</W.push>
       </W.pushBox>
     </W.wBox>
+    {
+      props === "block" ?
+      <Mood props={props}></Mood>:null
+    }
     <Button/>
     </>
   )

@@ -11,7 +11,7 @@ function Header() {
   return(
     <>
       <Navbar>
-          <Container classNamr='header'>
+          <Container className='header'>
           <Navbar.Brand href="/"><img className='logo1' src={Logo}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

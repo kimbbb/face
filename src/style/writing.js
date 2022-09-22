@@ -46,6 +46,7 @@ export const month=styled.input`
   padding: 6px;
   border: none;
   position: absolute;
+  text-align:center;
   top: 50%;
   left: 60%;
   transform: translate(-50%,-50%);
@@ -69,17 +70,42 @@ export const icon = styled.option`
   text-align: center;
 `
 
-export const title=styled.input`
-  width:100%;
-  height:70px;
-  font-size:18px;
-  font-weight:700;
-
-  margin-bottom:20px;
-  padding:20px;
+export const titlebox=styled.div`
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+  position: relative;
   border-radius: 10px;
-  background:#EFF2F9;
-  border:none;
+  background: #EFF2F9;
+  padding: 10px;
+  &:focus-within{
+    outline:4px solid #BE97FF82;
+  }
+`
+
+export const title=styled.input`
+  width: 88%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px;
+  border: none;
+  background: #EFF2F9;
+  &:focus{
+    outline:none;
+  }
+`
+
+export const mood=styled.button`
+  top: 50%;
+  right: 20px;
+  transform: translate(0px, -50%);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
   &:focus{
     outline:4px solid #BE97FF82;
   }
@@ -134,8 +160,6 @@ export const pushBox=styled.div`
 export const push=styled.button`
   width:120px;
   height:60px;
-  font-weight:700;
-  font-size:18px;
   color:#fff;
   border-radius:10px;
   background:#BE97FF82;
@@ -147,4 +171,19 @@ export const push=styled.button`
       background:#BE97FF99;
     }
   }
+`
+
+export const face=styled.div`
+  // display:${(props) => props.props}
+  position: absolute;
+  width: 280px;
+  top: 30%;
+  right: 8%;
+  height: 400px;
+  background: #fff;
+  border:4px solid #BE97FF99;
+  border-radius:20px;
+  padding:20px;
+  font-size:16px;
+  font-weight:700;
 `
