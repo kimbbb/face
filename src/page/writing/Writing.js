@@ -8,6 +8,7 @@ import { useState } from "react";
 function Writing() {
 
   let [props, setProps]=useState("none");
+  const [img, setImg] = useState("")
 
   function changeMode(){
     if (props === "none"){
@@ -16,6 +17,8 @@ function Writing() {
       setProps("none")
     }
   }
+
+ 
 
   return(
     <>
@@ -37,8 +40,10 @@ function Writing() {
       <W.titlebox>
         <W.title placeholder="제목을 작성해주세요."/>
         <W.mood 
-        onClick={changeMode}
-        />
+         onClick={changeMode}
+         img={img}
+        >
+        </W.mood>
       </W.titlebox>
 
       <W.ingbox>
@@ -51,7 +56,7 @@ function Writing() {
     </W.wBox>
     {
       props === "block" ?
-      <Mood props={props}></Mood>:null
+      <Mood props={props} img={img} setImg={setImg}>dfsd</Mood>:null
     }
     <Button/>
     </>

@@ -102,12 +102,14 @@ export const mood=styled.button`
   transform: translate(0px, -50%);
   width: 50px;
   height: 50px;
-  background: #fff;
   border: none;
   border-radius: 10px;
   position: absolute;
-  &:focus{
-    outline:4px solid #BE97FF82;
+  background-image: url(${({img}) => img});
+  background-size:cover;
+  background-color: #fff;
+  &:focus-within{
+    outline:none;
   }
 `
 
@@ -186,4 +188,19 @@ export const face=styled.div`
   padding:20px;
   font-size:16px;
   font-weight:700;
+`
+
+export const facediv=styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translate(2%, -46%);
+`
+
+export const ficon=styled.img`
+  margin: 20px 8px;
+  border-radius:100%;
+  &:hover{
+    background:#BE97FF80;
+    outline:2px solid #BE97FF80;
+  }
 `
