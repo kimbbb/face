@@ -5,6 +5,7 @@ import Login from "./page/user/Login.js";
 import Sign from "./page/user/Sign.js";
 import About from "./page/about/About.js";
 import Writing from "./page/writing/Writing.js";
+import Diary from "./page/diary/Diary.js";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/signup' element={<Sign/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/writing' element={<Writing/>}/>
+        <Route path='/diary' element={<Diary/>}/>
       </Routes>
     </div>
   );
