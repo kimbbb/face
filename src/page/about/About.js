@@ -1,6 +1,6 @@
 import Header from '../../components/header/Header3';
 import aboutimg from '../../image/about.svg'
-import Button from '../writing/Button.js';
+import Button from '../../components/Button.js';
 
 function About() {
   return(

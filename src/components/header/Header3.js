@@ -10,8 +10,8 @@ function Header3() {
 
   return(
     <>
-      <Navbar style={{background:'rgb(0 48 96 / 66%)'}}>
-          <Container className='header'>
+      <Navbar expand="lg" style={{background:'rgb(0 48 96 / 66%)'}}>
+        <Container className='header'>
           <Navbar.Brand href="/"><img className='logo1' src={Logo}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -24,7 +24,7 @@ function Header3() {
             </div>         
           </Nav>
           </Navbar.Collapse>
-          </Container>
+        </Container>
       </Navbar>
     </>
   )

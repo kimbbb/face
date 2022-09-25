@@ -1,5 +1,5 @@
 import Header from "../../components/header/Header2.js";
-import Button from './Button.js';
+import Button from '../../components/Button.js';
 import Mood from './Mood.js'
 import * as W from '../../style/writing.js'
 import { useState } from "react";

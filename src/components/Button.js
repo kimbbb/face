@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import face from "../../image/writing.svg"
-import hover from "../../image/hover.png"
+import face from "../image/writing.svg"
+import hover from "../image/hover.png"
 import { useNavigate } from "react-router-dom";
 
 const BtnBox=styled.div`
