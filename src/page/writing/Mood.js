@@ -3,8 +3,6 @@ import data from '../../data/data.js'
 import { useState } from 'react'
 
 
-
-
 function Mood({
   props, img, setImg
 }) {

@@ -16,7 +16,7 @@ export const wBox= styled.div`
 export const dial=styled.h2`
   margin-bottom:30px;
   font-size:24px;
-  font-weight:700
+  font-weight:700;
 `
 
 export const date=styled.div`
@@ -167,6 +167,8 @@ export const push=styled.button`
   background:#BE97FF82;
   border:none;
   margin-left:20px;
+  font-size:18px;
+  font-weight:700;
   &:focus {
     &:hover{
       outline:4px solid #BE97FF;

@@ -50,7 +50,6 @@ function Writing() {
         <W.ing placeholder="일기를 작성해주세요."></W.ing>
       </W.ingbox>
       <W.pushBox>
-        <W.push>삭제</W.push>
         <W.push>완료</W.push>
       </W.pushBox>
     </W.wBox>
