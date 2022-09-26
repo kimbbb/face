@@ -14,9 +14,9 @@ export const card = styled.div`
   height:400px;
   background-color:#fff;
   border-radius:20px;
-  margin:20px;
+  margin:40px 20px;
   &:hover{
-    outline:4px solid #BE97FF;
+    outline:4px solid #BE97FF80;
   }
 `
 
@@ -58,9 +58,10 @@ export const check= styled.button`
   color:#fff;
   border-radius:20px;
   border:none;
+  font-size:17px;
   &:hover{
     &:focus{
-      outline:4px solid #BE97FF;
+      outline:4px solid #BE97FF80;
     }
   } 
 `
