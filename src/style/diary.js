@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const box=styled.div`
   width:80%;
   position: relative;
-  top:140px;
   left: 13%;
+  padding:120px 0px;
 `
 
 export const card = styled.div`
