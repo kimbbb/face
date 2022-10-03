@@ -4,7 +4,7 @@ function Detail() {
   return(
     <>
     <De.bg>
-      
+      <div></div>
     </De.bg>
     </>
   )
