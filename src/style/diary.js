@@ -58,7 +58,8 @@ export const check= styled.button`
   color:#fff;
   border-radius:20px;
   border:none;
-  font-size:17px;
+  font-size:18px;
+  font-weight:600;
   &:hover{
     &:focus{
       outline:4px solid #BE97FF80;

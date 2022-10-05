@@ -18,14 +18,15 @@ function Diary(){
       {
         object.map(function(a,i){
           return(
-            <D.card onClick={()=>{navigate('/modal')}}>
+            <D.card key={a.id} onClick={()=>{
+              navigate('/diary/' + a.id)}}>
                 <D.top>
                   <D.image src={a.img}/>
                 </D.top>
                 <D.bottom>
                   <D.title>{a.title}</D.title>
                   <D.p>{a.date}</D.p>
-                  <D.check>확인</D.check>
+                  <D.check>Click</D.check>
                 </D.bottom>
             </D.card>    
           )

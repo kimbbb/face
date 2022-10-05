@@ -7,6 +7,7 @@ import About from "./page/about/About.js";
 import Writing from "./page/writing/Writing.js";
 import Diary from "./page/diary/Diary.js";
 import Detail from "./page/diary/Detail.js";
+import data from "./data/ddata.js"
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/writing' element={<Writing/>}/>
         <Route path='/diary' element={<Diary/>}/>
-        <Route path='/modal' element={<Detail/>}/>
+        <Route path='/diary/:id' element={<Detail object={data}/>}/>
       </Routes>
     </div>
   );

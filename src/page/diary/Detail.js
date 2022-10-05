@@ -1,9 +1,10 @@
 import * as De from '../../style/detail.js'
-import { useNavigate } from 'react-router-dom';
-import face from "../../image/writing.svg"
+import { useNavigate, useParams } from 'react-router-dom';
 
-function Detail() {
+function Detail(props) {
 
+  let {id}=useParams();
+  props.object.find((x)=>x.id==id)
   let navigate = useNavigate();
 
   return(
@@ -11,48 +12,24 @@ function Detail() {
     <De.bg>
       <De.detail>
         <De.header>
-          <De.title>제목</De.title>
+          <De.title>{props.object[id].title}</De.title>
           <De.closebtn onClick={()=>{navigate('/diary')}}/>
         </De.header>
 
         <De.items>
           <De.top>
             <De.face>
-              <De.icon src={face}/>
+              <De.icon src={props.object[id].img} />
             </De.face>
 
             <De.dbox>
-              <De.date>날짜</De.date>
-              <De.date>날씨</De.date>
+              <De.date>{props.object[id].date}</De.date>
+              <De.date>{props.object[id].weather}</De.date>
             </De.dbox>
           </De.top>
 
           <De.bottom>
-            <De.book>
-              djdflkajfhakjfdhaklsfhdsajfhskd
-              hfalhfkajhflajffaasfdjafdaksfalk
-              fdafjdhajfhafdjaflajsdf
-              djdflkajfhakjfdhaklsfhdsajfhskd
-              hfalhfkajhflajffaasfdjafdaksfalk
-              fdafjdhajfhafdjaflajsdf
-              djdflkajfhakjfdhaklsfhdsajfhskd
-              hfalhfkajhflajffaasfdjafdaksfalk
-              fdafjdhajfhafdjaflajsdf
-              djdflkajfhakjfdhaklsfhdsajfhskd
-              hfalhfkajhflajffaasfdjafdaksfalk
-              fdafjdhajfhafdjaflajsdf
-              djdflkajfhakjfdhaklsfhdsajfhskd
-              hfalhfkajhflajffaasfdjafdaksfalk
-              fdafjdhajfhafdjaflajsdf
-              djdflkajfhakjfdhaklsfhdsajfhskd
-              hfalhfkajhflajffaasfdjafdaksfalk
-              fdafjdhajfhafdjaflajsdf
-              djdflkajfhakjfdhaklsfhdsajfhskd
-              hfalhfkajhflajffaasfdjafdaksfalk
-              fdafjdhajfhafdjaflajsdf
-              djdflkajfhakjfdhaklsfhdsajfhskd
-              hfalhfkajhflajffaasfdjafdaksfalk
-              fdafjdhajfhafdjaflajsdf</De.book>
+            <De.book>{props.object[id].txt}</De.book>
           </De.bottom>
 
           <De.del>Delete</De.del>

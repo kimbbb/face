@@ -106,6 +106,7 @@ export const bottom=styled.div`
   padding:16px;
   margin-bottom:20px;
   border-radius:10px;
+  font-size: 18px;
 `
 
 export const book=styled.div`
