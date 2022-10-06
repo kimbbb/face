@@ -4,16 +4,19 @@ import { useState } from 'react'
 
 
 function Mood({
-  props, img, setImg
+  props, setProps, img, setImg
 }) {
 
   console.log(props)
   let [face, setFace]=useState(data);
-  console.log(face)
+  //console.log(face)
 
+
+  
   return(
   <>
-  <W.face props={props} >FACE
+  <W.face props={props}>FACE
+  <W.close/>
 
     <W.facediv>
 

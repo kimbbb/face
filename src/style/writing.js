@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import closebtn from '../image/close2.png'
+
 
 export const wBox= styled.div`
   padding:40px;
@@ -178,7 +180,7 @@ export const push=styled.button`
 `
 
 export const face=styled.div`
-  // display:${(props) => props.props}
+  //display:${(props) => props.props};
   position: absolute;
   width: 280px;
   top: 30%;
@@ -190,6 +192,19 @@ export const face=styled.div`
   padding:20px;
   font-size:16px;
   font-weight:700;
+`
+
+export const close=styled.button`
+  float: right;
+  border:none;
+  width:16px;
+  height:16px;
+  background-image:url(${closebtn});
+  background-size: cover;
+  background-color: #fff;
+  &:focus{
+    outline:none;
+  }
 `
 
 export const facediv=styled.div`

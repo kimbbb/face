@@ -14,6 +14,7 @@ function Writing() {
     if (props === "none"){
       setProps("block")
     } else {
+      // console.log('none')
       setProps("none")
     }
   }
@@ -55,7 +56,7 @@ function Writing() {
     </W.wBox>
     {
       props === "block" ?
-      <Mood props={props} img={img} setImg={setImg}>dfsd</Mood>:null
+      <Mood props={props} img={img} setImg={setImg}/>:null
     }
     <Button/>
     </>
