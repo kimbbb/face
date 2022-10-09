@@ -7,16 +7,16 @@ function Mood({
   props, setProps, img, setImg
 }) {
 
-  console.log(props)
+  // console.log(props)
   let [face, setFace]=useState(data);
   //console.log(face)
-
-
   
   return(
   <>
   <W.face props={props}>FACE
-  <W.close/>
+  {/* <W.close onclick={()=>{
+    
+  }} /> */}
 
     <W.facediv>
 
