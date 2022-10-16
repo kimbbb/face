@@ -4,7 +4,7 @@ import {Navbar, Nav, Container } from 'react-bootstrap';
 import {Routes, Route, Link, useNavigate} from 'react-router-dom';
 
 
-function Header2() {
+function Header4() {
 
   let navigate=useNavigate();
 
@@ -17,7 +17,11 @@ function Header2() {
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link onClick={()=>{ navigate('/diary') }}>다이어리</Nav.Link>
-            <Nav.Link onClick={()=>{ navigate('/about') }}>소개</Nav.Link>     
+            <Nav.Link onClick={()=>{ navigate('/about') }}>소개</Nav.Link>
+            <div id='log' >
+            <Nav.Link onClick={()=>{ navigate('/') }}>로그인</Nav.Link>
+            <Nav.Link onClick={()=>{ navigate('/signup') }}>회원가입</Nav.Link> 
+            </div>         
           </Nav>
           </Navbar.Collapse>
           </Container>
@@ -26,4 +30,4 @@ function Header2() {
   )
 }
 
-export default Header2;
+export default Header4;

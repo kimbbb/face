@@ -1,4 +1,4 @@
-import Header from "../../components/header/Header2.js";
+import Header from "../../components/header/Header4.js";
 import * as L from "../../style/login.js"
 import slogo from "../../image/slogo.svg"
 import user from "../../image/user.svg"
@@ -28,7 +28,7 @@ function Sign() {
         </L.right>
 
         <L.text>이미 회원이신가요?
-        <L.link onClick={()=>{ navigate('/login') }}>로그인</L.link>
+        <L.link onClick={()=>{ navigate('/') }}>로그인</L.link>
       </L.text>
       </L.inBox>
     </L.sbox>
