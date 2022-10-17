@@ -23,7 +23,7 @@ function Sign() {
             <L.llogo src={slogo}/>
             <L.id type='text' placeholder="아이디 입력"/>
             <L.id type='password' placeholder="비밀번호 입력"/>
-            <L.push>회원가입</L.push>
+            <L.push onClick={()=>{navigate('/main')}}>회원가입</L.push>
           </L.login>
         </L.right>
 

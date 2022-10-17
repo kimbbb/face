@@ -23,7 +23,7 @@ function Login() {
             <L.llogo src={llogo}/>
             <L.id type='text' placeholder="아이디 입력"/>
             <L.id type='password' placeholder="비밀번호 입력"/>
-            <L.push>로그인</L.push>
+            <L.push onClick={()=>{navigate('/main')}}>로그인</L.push>
           </L.login>
         </L.right>
 
