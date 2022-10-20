@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import data from '../../data/ddata.js'
 import { useState } from 'react';
 
+
 function Diary(){
 
   let navigate=useNavigate();
