@@ -18,12 +18,12 @@ function App() {
       <Routes>
         <Route path='/main' element={<Main/>}/>
         <Route path='/' element={<Login/>}/>
+        <Route path='/*' element={<Notfind/>}/>
+        <Route path='/loading' element={<Loading/>}/>
         <Route path='/signup' element={<Sign/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/writing' element={<Writing/>}/>
         <Route path='/diary' element={<Diary/>}/>
-        <Route path='/loading' element={<Loading/>}/>
-        <Route path='/not' element={<Notfind/>}/>
         <Route path='/diary/:id' element={<Detail object={data}/>}/>
       </Routes>
     </div>
