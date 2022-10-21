@@ -15,10 +15,6 @@ function Header4() {
           <Navbar.Brand><img className='logo1' src={Logo}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link onClick={()=>{ navigate('/signup') }}>회원가입</Nav.Link>
-            <Nav.Link onClick={()=>{ navigate('/') }}>로그인</Nav.Link>       
-          </Nav>
           </Navbar.Collapse>
           </Container>
       </Navbar>
