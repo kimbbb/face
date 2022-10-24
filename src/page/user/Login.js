@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import axios from "axios";
 import Header from "../../components/header/Header4.js";
 import * as L from "../../style/login.js"
 import llogo from "../../image/llogo.svg"
@@ -6,6 +8,9 @@ import { useNavigate } from "react-router-dom";
 
 
 function Login() {
+
+  let [id, setId]=useState();
+  let [password, setPassword]=useState();
 
   let navigate=useNavigate();
 
@@ -21,14 +26,18 @@ function Login() {
         <L.right>
           <L.login>
             <L.llogo src={llogo}/>
-            <L.id type='text' placeholder="아이디 입력"/>
-            <L.id type='password' placeholder="비밀번호 입력"/>
-            <L.push onClick={()=>{navigate('/main')}}>로그인</L.push>
+            <L.id type='text' placeholder="아이디 입력" onChange={(e) => {setId(e.target.value)}}/>
+            <L.id type='password' placeholder="비밀번호 입력" onChange={(e) => {setPassword(e.target.value)}}/>
+            <L.push onClick={()=>{ 
+              axios
+                .post('/sign-in', { id: id, password: password })
+                .then((result) => {navigate("/main")});
+            }}>로그인</L.push>
           </L.login>
         </L.right>
 
         <L.text>아직 계정이 없으신가요?
-        <L.link onClick={()=>{ navigate('/signup') }}>회원가입</L.link>
+        <L.link onClick={()=>{navigate("/signup")}}>회원가입</L.link>
       </L.text>
       </L.inBox>
     </L.box>
