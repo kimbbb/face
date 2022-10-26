@@ -43,12 +43,13 @@ function Sign() {
                   .post('/sign-up', { id: id, password: password, type: selected })
                   .then((result) => {navigate("/")});
               }}>회원가입</L.push>
+
+            <L.text>이미 회원이신가요?
+              <L.link  onClick={() => {navigate("/")}}>로그인</L.link>
+            </L.text>
           </L.login>
         </L.right>
 
-        <L.text>이미 회원이신가요?
-        <L.link  onClick={() => {navigate("/")}}>로그인</L.link>
-      </L.text>
       </L.inBox>
     </L.sbox>
     </>

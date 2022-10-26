@@ -33,12 +33,14 @@ function Login() {
                 .post('/sign-in', { id: id, password: password })
                 .then((result) => {navigate("/main")});
             }}>로그인</L.push>
+
+            <L.text>아직 계정이 없으신가요?
+              <L.link onClick={()=>{navigate("/signup")}}>회원가입</L.link>
+            </L.text>
           </L.login>
         </L.right>
 
-        <L.text>아직 계정이 없으신가요?
-        <L.link onClick={()=>{navigate("/signup")}}>회원가입</L.link>
-      </L.text>
+        
       </L.inBox>
     </L.box>
     </>

@@ -39,8 +39,10 @@ export const leftimg=styled.img`
 
 export const text=styled.p`
   position: absolute;
-  left: 0%;
-  bottom: -7%;
+    left: -6%;
+    bottom: -20%;
+    padding: 20px;
+    margin: 0;
 `
 
 export const link=styled.a`
