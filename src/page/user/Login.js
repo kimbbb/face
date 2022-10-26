@@ -30,7 +30,7 @@ function Login() {
             <L.id type='password' placeholder="비밀번호 입력" onChange={(e) => {setPassword(e.target.value)}}/>
             <L.push onClick={()=>{ 
               axios
-                .post('/sign-in', { id: id, password: password })
+                .post('http://localhost:8081/auth/sign-in', { id: id, password: password })
                 .then((result) => {navigate("/main")});
             }}>로그인</L.push>
 

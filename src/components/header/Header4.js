@@ -10,7 +10,7 @@ function Header4() {
 
   return(
     <>
-      <Navbar expand="lg" style={{background:'#fff'}}>
+      <Navbar style={{background:'#fff'}}>
           <Container className='header'>
           <Navbar.Brand><img className='logo1' src={Logo}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

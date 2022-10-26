@@ -40,7 +40,7 @@ function Sign() {
               }}/>
             <L.push onClick={() => {
                 axios
-                  .post('/sign-up', { id: id, password: password, type: selected })
+                  .post('http://localhost:8081/auth/sign-up', { id: id, password: password, type: selected })
                   .then((result) => {navigate("/")});
               }}>회원가입</L.push>
 
