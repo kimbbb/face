@@ -17,7 +17,8 @@ function Header2() {
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link onClick={()=>{ navigate('/diary') }}>다이어리</Nav.Link>
-            <Nav.Link onClick={()=>{ navigate('/about') }}>소개</Nav.Link>     
+            <Nav.Link onClick={()=>{ navigate('/about') }}>소개</Nav.Link>
+            <Nav.Link className='out' onClick={()=>{}}>로그아웃</Nav.Link>     
           </Nav>
           </Navbar.Collapse>
           </Container>

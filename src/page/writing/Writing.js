@@ -3,12 +3,18 @@ import Button from '../../components/Button.js';
 import Mood from './Mood.js'
 import * as W from '../../style/writing.js'
 import { useState } from "react";
+import axios from "axios";
 
 
 function Writing() {
 
   let [props, setProps]=useState("none");
-  const [img, setImg] = useState("")
+  const [img, setImg] = useState("");
+
+  let[date, setDate]=useState();
+  let[weather, setWeather]=useState("🌞 맑음");
+  let [title, setTitle]=useState();
+  let[contents, setContents]=useState();
 
   function changeMode(){
     if (props === "none"){
@@ -27,9 +33,11 @@ function Writing() {
     <W.wBox>
       <W.dial>일기 작성</W.dial>
       <W.date>
-        <W.mon>날짜<W.month type='date'/></W.mon>
+        <W.mon>날짜<W.month type='date' onChange={(e)=>{
+          setDate(e.target.value)}}/></W.mon>
         <W.mon>날씨
-          <W.weather>
+          <W.weather onChange={(e)=>{
+            setWeather(e.target.value)}}>
             <W.icon>🌞 맑음</W.icon>
             <W.icon>🌥️ 흐림</W.icon>
             <W.icon>☃️ 눈</W.icon>
@@ -39,7 +47,7 @@ function Writing() {
       </W.date>
 
       <W.titlebox>
-        <W.title placeholder="제목을 작성해주세요."/>
+        <W.title placeholder="제목을 작성해주세요." onChange={(e)=>{setTitle(e.target.value)}}/>
         <W.mood 
          onClick={changeMode}
          img={img}
@@ -48,10 +56,12 @@ function Writing() {
       </W.titlebox>
 
       <W.ingbox>
-        <W.ing placeholder="일기를 작성해주세요."></W.ing>
+        <W.ing placeholder="일기를 작성해주세요." onChange={(e)=>{setContents(e.target.value)}}></W.ing>
       </W.ingbox>
       <W.pushBox>
-        <W.push>완료</W.push>
+        <W.push onClick={()=>{
+          axios.post('http://localhost:8081/auth/', {date:date, weather:weather, title:title, contents:contents})
+        }}>완료</W.push>
       </W.pushBox>
     </W.wBox>
     {

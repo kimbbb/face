@@ -21,3 +21,7 @@ body{
   width:180px;
 }
 
+.out{
+  position: absolute;
+  right:14%;
+}
