@@ -13,6 +13,7 @@ export const wBox= styled.div`
   min-width:800px;
   background:#fff;
   border-radius:20px;
+  box-shadow: 0px 0px 40px rgba(130, 130, 130, 0.1);
 `
 
 export const dial=styled.h2`
@@ -45,7 +46,7 @@ export const mon=styled.div`
 export const month=styled.input`
   height: 40px;
   width: 260px;
-  padding: 6px;
+  padding: 10px;
   border: none;
   position: absolute;
   text-align:center;
@@ -60,7 +61,7 @@ export const weather=styled.select`
   align-items: center;
   height: 40px;
   width: 260px;
-  padding: 6px;
+  padding: 6px ;
   border: none;
   position: absolute;
   top: 50%;

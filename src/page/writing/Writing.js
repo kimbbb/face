@@ -1,12 +1,14 @@
 import Header from "../../components/header/Header2.js";
-import Button from '../../components/Button.js';
 import Mood from './Mood.js'
 import * as W from '../../style/writing.js'
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 function Writing() {
+
+  let navigate=useNavigate();
 
   let [props, setProps]=useState("none");
   const [img, setImg] = useState("");
@@ -60,7 +62,9 @@ function Writing() {
       </W.ingbox>
       <W.pushBox>
         <W.push onClick={()=>{
-          axios.post('http://localhost:8081/auth/', {date:date, weather:weather, title:title, contents:contents})
+          axios.post('http://localhost:8081/auth/', {date:date, weather:weather, title:title, img:img, contents:contents})
+          console.log(date, weather, title,img, contents)
+          .then((result)=>{navigate('/diary')})
         }}>완료</W.push>
       </W.pushBox>
     </W.wBox>
@@ -68,7 +72,6 @@ function Writing() {
       props === "block" ?
       <Mood props={props} img={img} setImg={setImg}/>:null
     }
-    <Button/>
     </>
   )
 }
