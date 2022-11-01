@@ -39,10 +39,9 @@ export const leftimg=styled.img`
 
 export const text=styled.p`
   position: absolute;
-    left: -6%;
-    bottom: -20%;
-    padding: 20px;
-    margin: 0;
+  bottom: -20%;
+  padding: 20px;
+  margin: 0;
 `
 
 export const link=styled.a`
@@ -58,7 +57,7 @@ export const right=styled.div`
   height:100%;
   min-width:50%;
   min-height:100%;
-  right:0%
+  right:0%;
 `
 
 export const login=styled.div`

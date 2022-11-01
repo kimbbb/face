@@ -31,7 +31,9 @@ function Login() {
             <L.push onClick={()=>{ 
               axios
                 .post('http://localhost:8081/auth/sign-in', { id: id, password: password })
-                .then((result) => {navigate("/main")});
+                .then((result) => {navigate("/main")})
+                .catch((result)=>{alert('로그인에 실패하셨습니다.')});
+                
             }}>로그인</L.push>
 
             <L.text>아직 계정이 없으신가요?
