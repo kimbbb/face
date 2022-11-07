@@ -1,16 +1,33 @@
 import Header from '../../components/header/Header2.js';
 import Button from '../../components/Button.js';
 import * as D from '../../style/diary.js';
-import { useNavigate } from 'react-router-dom';
-import data from '../../data/ddata.js'
-import { useState } from 'react';
-
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function Diary(){
+  const navigate=useNavigate();
+  const [object, setObject]=useState([]);
 
-  let navigate=useNavigate();
-  let [object, setObject]=useState(data);
+  const getBoard = async() => {
+    await axios.get('http://localhost:8081/board')
+    .then((res)=>{
+      let temp = res.data.data
+      setObject([...temp]);
+      console.log(res.data)
+    }).catch((err) => {
+      console.log(err)
+    });
+  }
   console.log(object)
+
+  useEffect(() => {
+    getBoard();
+  }, [])
+
+  function goToDetail(id){
+    navigate('/diary/' + id, {state:object[id]})
+  }
 
   return(
     <>
@@ -20,13 +37,14 @@ function Diary(){
         object.map(function(a,i){
           return(
             <D.card key={a.id} onClick={()=>{
-              navigate('/diary/' + a.id)}}>
+              goToDetail(a.id)
+            }}>
                 <D.top>
-                  <D.image src={a.img}/>
+                  <D.image src={a.face}/>
                 </D.top>
                 <D.bottom>
                   <D.title>{a.title}</D.title>
-                  <D.p>{a.date}</D.p>
+                  <D.p>{a.save_date}</D.p>
                   <D.check>Click</D.check>
                 </D.bottom>
             </D.card>    

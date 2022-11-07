@@ -7,7 +7,6 @@ import About from "./page/about/About.js";
 import Writing from "./page/writing/Writing.js";
 import Diary from "./page/diary/Diary.js";
 import Detail from "./page/diary/Detail.js";
-import data from "./data/ddata.js"
 import Loading from "./page/loading/Loading.js";
 import Notfind from "./page/loading/Notfind.js";
 
@@ -24,7 +23,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/writing' element={<Writing/>}/>
         <Route path='/diary' element={<Diary/>}/>
-        <Route path='/diary/:id' element={<Detail object={data}/>}/>
+        <Route path='/diary/:id' element={<Detail/>}/>
       </Routes>
     </div>
   );

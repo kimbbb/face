@@ -41,7 +41,8 @@ function Sign() {
             <L.push onClick={() => {
                 axios
                   .post('http://localhost:8081/auth/sign-up', { id: id, password: password, type: selected })
-                  .then((result) => {navigate("/")});
+                  .then((result) => {navigate("/")})
+                  .catch(()=>{alert('이미 존재하는 아이디입니다😥')})
               }}>회원가입</L.push>
 
             <L.text>이미 회원이신가요?

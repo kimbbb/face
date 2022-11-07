@@ -32,7 +32,7 @@ function Login() {
               axios
                 .post('http://localhost:8081/auth/sign-in', { id: id, password: password })
                 .then((result) => {navigate("/main")})
-                .catch((result)=>{alert('로그인에 실패하셨습니다.')});
+                .catch((result)=>{alert('로그인에 실패하셨습니다 😥')});
                 
             }}>로그인</L.push>
 

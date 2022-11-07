@@ -14,9 +14,9 @@ function Writing() {
   const [img, setImg] = useState("");
 
   let[date, setDate]=useState();
-  let[weather, setWeather]=useState("🌞 맑음");
+  let[weather, setWeather]=useState("맑음");
   let [title, setTitle]=useState();
-  let[contents, setContents]=useState();
+  let[content, setContent]=useState();
 
   function changeMode(){
     if (props === "none"){
@@ -39,14 +39,16 @@ function Writing() {
           setDate(e.target.value)}}/></W.mon>
         <W.mon>날씨
           <W.weather onChange={(e)=>{
+            console.log(e.target.value)
             setWeather(e.target.value)}}>
-            <W.icon>🌞 맑음</W.icon>
-            <W.icon>🌥️ 흐림</W.icon>
-            <W.icon>☃️ 눈</W.icon>
-            <W.icon>☔ 비</W.icon>
+            <W.icon value="맑음" >🌞 맑음</W.icon>
+            <W.icon value="흐림">🌥️ 흐림</W.icon>
+            <W.icon value="눈">☃️ 눈</W.icon>
+            <W.icon value="비">☔ 비</W.icon>
           </W.weather>
           </W.mon>
       </W.date>
+
 
       <W.titlebox>
         <W.title placeholder="제목을 작성해주세요." onChange={(e)=>{setTitle(e.target.value)}}/>
@@ -58,13 +60,13 @@ function Writing() {
       </W.titlebox>
 
       <W.ingbox>
-        <W.ing placeholder="일기를 작성해주세요." onChange={(e)=>{setContents(e.target.value)}}></W.ing>
+        <W.ing placeholder="일기를 작성해주세요." onChange={(e)=>{setContent(e.target.value)}}></W.ing>
       </W.ingbox>
       <W.pushBox>
         <W.push onClick={()=>{
-          axios.post('http://localhost:8081/auth/', {date:date, weather:weather, title:title, img:img, contents:contents})
-          console.log(date, weather, title,img, contents)
-          .then((result)=>{navigate('/diary')})
+          console.log(date, weather, title,img, content)
+          axios.post('http://localhost:8081/board', {date:date, weather:weather, title:title, face:img, content:content})
+          .then(()=>{navigate('/diary')});
         }}>완료</W.push>
       </W.pushBox>
     </W.wBox>

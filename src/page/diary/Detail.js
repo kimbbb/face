@@ -1,38 +1,47 @@
 import * as De from '../../style/detail.js'
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
 
-function Detail(props) {
+function Detail() {
 
-  let {id}=useParams();
-  props.object.find((x)=>x.id==id)
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const location = useLocation()
+  console.log(location.state)
+
 
   return(
     <>
     <De.bg>
       <De.detail>
         <De.header>
-          <De.title>{props.object[id].title}</De.title>
+          <De.title>{location.state.title}</De.title>
           <De.closebtn onClick={()=>{navigate('/diary')}}/>
         </De.header>
 
         <De.items>
           <De.top>
             <De.face>
-              <De.icon src={props.object[id].img} />
+              <De.icon src={location.state.face} />
             </De.face>
 
             <De.dbox>
-              <De.date>{props.object[id].date}</De.date>
-              <De.date>{props.object[id].weather}</De.date>
+              <De.date>{location.state.save_date}</De.date>
+              <De.date>{location.state.weather}</De.date>
             </De.dbox>
           </De.top>
 
           <De.bottom>
-            <De.book>{props.object[id].txt}</De.book>
+            <De.book>{location.state.content}</De.book>
           </De.bottom>
 
-          <De.del>Delete</De.del>
+          <De.del
+          onClick={()=>{
+            console.log(location.state.id)
+            axios
+            .delete('http://localhost:8081/board/:id', {id:location.state.id})
+            .then(()=>{alert('일기가 삭제되었습니다😄'); navigate('/diary')})
+          }}>Delete</De.del>
 
         </De.items>
       </De.detail>

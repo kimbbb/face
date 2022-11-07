@@ -46,7 +46,7 @@ const data=[
 
   {
     id:9,
-    img:'/face/omg.svg'
+    img:'/face/why.svg'
   },
 
   {
