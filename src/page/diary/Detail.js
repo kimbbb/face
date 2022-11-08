@@ -38,8 +38,9 @@ function Detail() {
           <De.del
           onClick={()=>{
             console.log(location.state.id)
+            const iid=location.state.id
             axios
-            .delete('http://localhost:8081/board/:id', {id:location.state.id})
+            .delete(`http://localhost:8081/board/${iid}`)
             .then(()=>{alert('일기가 삭제되었습니다😄'); navigate('/diary')})
           }}>Delete</De.del>
 
