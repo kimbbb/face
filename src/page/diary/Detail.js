@@ -7,7 +7,6 @@ function Detail() {
   const navigate = useNavigate();
 
   const location = useLocation()
-  console.log(location.state)
 
 
   return(
