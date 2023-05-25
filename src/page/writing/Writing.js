@@ -27,8 +27,6 @@ function Writing() {
     }
   }
 
- 
-
   return(
     <>
     <Header/>

@@ -14,12 +14,12 @@ function Diary(){
     .then((res)=>{
       let temp = res.data.data
       setObject([...temp]);
-      console.log(res.data)
+      // console.log(res.data)
     }).catch((err) => {
       console.log(err)
     });
   }
-  console.log(object)
+  // console.log(object)
 
   useEffect(() => {
     getBoard();
